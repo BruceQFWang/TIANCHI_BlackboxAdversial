@@ -15,3 +15,4 @@ Download and unzip models
 ```bash
 $ python target_iteration.py
 ```
+If you only add noise to the face area, you need to leverage dlib to crop the face, which will be elaborated later.
