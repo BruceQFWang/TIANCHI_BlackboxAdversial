@@ -1,0 +1,14 @@
+securityAI_round1_images/00366.jpg;securityAI_round1_images/00636.jpg;-0.2059140507615969
+securityAI_round1_images/00404.jpg;securityAI_round1_images/00140.jpg;-0.24368050804097402
+securityAI_round1_images/00414.jpg;securityAI_round1_images/00089.jpg;-0.1785227332529202
+securityAI_round1_images/00466.jpg;securityAI_round1_images/00107.jpg;-0.20899107218324353
+securityAI_round1_images/00125.jpg;securityAI_round1_images/00003.jpg;-0.23503844948627292
+securityAI_round1_images/00130.jpg;securityAI_round1_images/00192.jpg;-0.133912232802682
+securityAI_round1_images/00139.jpg;securityAI_round1_images/00162.jpg;-0.011485059574909253
+securityAI_round1_images/00140.jpg;securityAI_round1_images/00404.jpg;-0.13162811088423798
+securityAI_round1_images/00557.jpg;securityAI_round1_images/00332.jpg;-0.1462298896458113
+securityAI_round1_images/00686.jpg;securityAI_round1_images/00304.jpg;-0.22487886939432483
+securityAI_round1_images/00691.jpg;securityAI_round1_images/00114.jpg;-0.22314633332461895
+securityAI_round1_images/00339.jpg;securityAI_round1_images/00438.jpg;-0.2458486636471177
+securityAI_round1_images/00341.jpg;securityAI_round1_images/00417.jpg;-0.23561598141102263
+securityAI_round1_images/00351.jpg;securityAI_round1_images/00579.jpg;-0.17228924945332474
