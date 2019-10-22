@@ -45,7 +45,7 @@ The existing neural network model is sensitive to important parts when training 
  
  ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks.png) 
  
- [crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py)
+ The order of selecting 17 face landmarks is (48, 59-54, 26-17), reference code[crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py)
  
 
 ### momentum trick
