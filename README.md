@@ -27,5 +27,5 @@ In addition, our model still uses multi-process multi-graphics acceleration. We 
 ## input diversity
 
 $$
-X_{n+1}^{adv}=Clip_X^ϵ {X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ))}
+X_{n+1}^{adv}=Clip_X^ϵ { X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ)) }
 $$
