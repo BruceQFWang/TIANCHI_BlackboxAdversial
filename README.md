@@ -38,7 +38,8 @@ $$G(x,y)=1/{(2πσ^2)} e^{{-(x^2+y^2)}/2σ^2} $$
 
 ### momentum trick
 By integrating the momentum term into the iterative process of the attack, adding the momentum term stabilizes the update direction and leaves the poor local maximum during the iteration, resulting in more migrating adversarial samples. In order to further improve the success rate of black box attacks, we apply the momentum iteration algorithm to the integration. Experiments show that the black box attack is better after adding the momentum term. The formula for the calculation is as follows:
-$$g_{n+1}= μ*g_n+(∇_x L(X_n^{adv},y^{true};θ))/{||∇_x L(X_n^{adv},y^{true};θ)||_1 }$$
+$$ g_{n+1}= μ*g_n+(∇_x L(X_n^{adv},y^{true};θ))/{||∇_x L(X_n^{adv},y^{true};θ)||_1 } $$
+
 $$X_{n+1}^{adv}=Clip_X^ϵ (X_n^{adv}+α*sign(g_{n+1}) )  $$
 
 
