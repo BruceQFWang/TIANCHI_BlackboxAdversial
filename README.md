@@ -28,7 +28,7 @@ In addition, our model still adopts multi-process multi-graphics acceleration. W
 
 ## TV loss
 In the process of noise cancelling, the large noise on the image may have a very large impact on the result. At this time, we need to add some regularizaiton to the model of the optimization problem to restrain the image smooth. TV loss is A commonly used regularizaiton in the CV. The integration of the continuous domain becomes the summation in the discrete region of the pixel. The specific calculation process is as follows:
-$$ tvloss= ∑_{i,j}((x_{i,j-1}-x_{i,j} )^2+(x_{i+1,j}-x_{i,j} )^2 )^(β/2) $$
+$$ tvloss= ∑_{i,j}((x_{i,j-1}-x_{i,j} )^2+(x_{i+1,j}-x_{i,j} )^2 )^{β/2} $$
 
 ### input diversity
 When training the lfw dataset, in addition to directly cropping the face portion of 112*112, we also employ a random padding similar to data augmentation, random resizing operation, to create a more hard and diverse input mode.
