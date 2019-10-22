@@ -29,4 +29,3 @@ In addition, our model still uses multi-process multi-graphics acceleration. We 
 '''
 X_(n+1)^adv=Clip_X^ϵ {X_n^adv+α*sign(∇_x L(T(X_n^adv;p),y^true;θ))}
 '''
-<a href="https://www.codecogs.com/eqnedit.php?latex=X_(n&plus;1)^adv=Clip_X^ϵ&space;{X_n^adv&plus;α*sign(∇_x&space;L(T(X_n^adv;p),y^true;θ))}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X_(n&plus;1)^adv=Clip_X^ϵ&space;{X_n^adv&plus;α*sign(∇_x&space;L(T(X_n^adv;p),y^true;θ))}" title="X_(n+1)^adv=Clip_X^ϵ {X_n^adv+α*sign(∇_x L(T(X_n^adv;p),y^true;θ))}" /></a>
