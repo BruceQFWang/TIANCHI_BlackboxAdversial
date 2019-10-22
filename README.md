@@ -21,7 +21,7 @@ If you only add noise to the face area, you need to leverage dlib to crop the fa
 ### Ensemble models
 First of all, this problem is based on black-box face attack. We integrate the common model structure, including IR50, IR101, IR152 (model depth is different), and the code called by the model is in the file model_irse.py. The specific algorithm flow chart is shown in Figure 1. Considering that the online evaluation system may determine the category of the image by similarity, we employ the target attack. Cal_likehood.py in the code file calculates the similarity between the images through multi-model integration. We select the second similar image as the target image to attack. At the same time, our loss function has three parts, the classic distance calculation loss such as L2, cos loss. TV loss is to maintain the smoothness of the image, which will be elaborated later. The resulting noise will be convolved by gauss kernel and finally superimposed on the original image. The above process is iterated until the current picture is terminated with its own matrix similarity of more than 0.25.
 
-In addition, our model still uses multi-process multi-graphics acceleration. We utilize two 1080Ti multi-processing calculations, and it takes less than one hour to generate 712 samples.
+In addition, our model still adopts multi-process multi-graphics acceleration. We utilize two 1080Ti multi-processing calculations, and it takes less than one hour to generate 712 samples.
 
 
 ## input diversity
