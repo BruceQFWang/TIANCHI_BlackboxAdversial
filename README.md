@@ -35,9 +35,11 @@ $$G(x,y)=1/{(2πσ^2)} e^{{-(x^2+y^2)}/2σ^2} $$
 
 ### Noise restriction region
 The existing neural network model is sensitive to important parts when training face data. In the [Face Attention Maps Visualization.ipynb](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/Face%20Attention%20Maps%20Visualization.ipynb) code, we try to generate an attention map on the image, and find that the face area color is more prominent.
+
  ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map%20init.png)  ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map%20final.png) 
  
- Therefore, the noise we add is only for the facial features. The specific implementation process, we use dlib to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image to the mask file, for a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
+ Therefore, the noise we add is only for the facial features. The specific implementation process, we use dlib to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image to the [mask1](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/tree/master/mask1) file, for a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
+ 
  ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks.png) 
  
  
