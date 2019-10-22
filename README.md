@@ -34,7 +34,7 @@ Gaussian filtering is performed on the generated interference noise, so that the
 $$G(x,y)=1/{(2πσ^2)} e^{{-(x^2+y^2)}/2σ^2} $$
 
 ### Noise restriction region
-| ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map%20init.png) | ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map%20init.png) |
+ ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map%20init.png)  ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map%20final.png) 
 
 ### momentum trick
 By integrating the momentum term into the iterative process of the attack, adding the momentum term stabilizes the update direction and leaves the poor local maximum during the iteration, resulting in more migrating adversarial samples. In order to further improve the success rate of black box attacks, we apply the momentum iteration algorithm to the integration. Experiments show that the black box attack is better after adding the momentum term. The formula for the calculation is as follows:
