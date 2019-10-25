@@ -11,7 +11,7 @@
 - scikit-image>=0.14
 - [models_百度云盘提取码：u46u](https://pan.baidu.com/s/1USe0e12jyeVj49AELL7KLw&shfl=shareset) or [models_Google drive](https://drive.google.com/open?id=1KrBN9-vlpmcbX5N-vc0QtKVsXuxF0jXd)
 
-Download and unzip models<sup>TM</sup>
+Download and unzip models
 ```bash
 $ python target_iteration.py
 ```
@@ -66,5 +66,5 @@ The algorithm computation process is as follows:
 $$X_{n+1}^{adv}=Clip_X^ϵ ( X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ)) )$$
 
 
-## Reference
+## Reference<sup>1</sup>
 
