@@ -68,5 +68,5 @@ $$X_{n+1}^{adv}=Clip_X^ϵ ( X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ
 
 ## Reference
 1. [Boosting Adversarial Attacks with Momentum](https://arxiv.org/pdf/1710.06081.pdf)
-2. [Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer](https://arxiv.org/abs/1612.03928)
+2. [Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer](https://arxiv.org/abs/1612.03928) | [code](https://github.com/szagoruyko/attention-transfer)
 
