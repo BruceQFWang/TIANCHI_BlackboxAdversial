@@ -19,7 +19,7 @@ If you only add noise to the face area, you need to leverage dlib to crop the fa
 
 ## Methods
 ### Ensemble models
-To address the black-box face attack challenge, we integrate the common DNN model structure, including IR50, IR101, IR152 (model depth is different). The code for model construction is in [model_irse.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/model_irse.py). The specific algorithm flow chart is shown in Figure 1. Considering that the online evaluation system may determine the category of the image by similarity, we employ the target attack. [Cal_likehood.py]() calculates the similarity between the faces through multi-model ensembling. We select the second similar image as the attack target. At the same time, our loss function is made up of three components, the classic distance loss such as L2, cos loss. TV loss is to maintain the smoothness of the image, which will be elaborated later. The resulting noise will be convolved by gauss kernel and finally superimposed on the original image. The above process is iterated until the current picture is terminated with its own matrix similarity of more than 0.25.
+To address the black-box face attack challenge, we integrate the common DNN model structure<sup>[1]</sup>, including IR50, IR101, IR152 (model depth is different). The code for model construction is in [model_irse.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/model_irse.py). The specific algorithm flow chart is shown in Figure 1. Considering that the online evaluation system may determine the category of the image by similarity, we employ the target attack. [Cal_likehood.py]() calculates the similarity between the faces through multi-model ensembling. We select the second similar image as the attack target. At the same time, our loss function is made up of three components, the classic distance loss such as L2, cos loss. TV loss is to maintain the smoothness of the image, which will be elaborated later. The resulting noise will be convolved by gauss kernel and finally superimposed on the original image. The above process is iterated until the current picture is terminated with its own matrix similarity of more than 0.25.
 
 ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/Algorithm%20flowchart.png)
 
@@ -50,7 +50,7 @@ The existing neural network model largely rely on critical regions(eyes, noses) 
  The order of selecting 17 face landmarks is (48, 59-54, 26-17), reference code [crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py) In the experiment, it took about 10 minutes to generate 712 non-mask areas using dlib.
  
 
-### momentum trick
+### momentum trick<sup>[1]</sup>
 Integrating the momentum into the iterative process of the attack stabilizes the update direction and leaves the poor local maximum during the iteration, resulting in adversarial samples with strong generalization ability. In order to elevated the success rate of black box attacks, we integrate the momentum iteration algorithm into our pipeline. Experiments show that the black box attack is better after adding the momentum term. The formula for the calculation is as follows:
 $$
 g_{n+1}= μ*g_n+(∇_x L(X_n^{adv},y^{true};θ))/{||∇_x L(X_n^{adv},y^{true};θ)||_1 }
@@ -66,5 +66,5 @@ The algorithm computation process is as follows:
 $$X_{n+1}^{adv}=Clip_X^ϵ ( X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ)) )$$
 
 
-## Reference<sup>1</sup>
-
+## Reference
+1. [Boosting Adversarial Attacks with Momentum](https://arxiv.org/pdf/1710.06081.pdf)
