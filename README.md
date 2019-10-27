@@ -46,6 +46,7 @@ The existing neural network model largely rely on critical regions(eyes, noses) 
  
  
  ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks%20crop.png) 
+ <div align=center><img width="150" height="150" src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks%20crop.png"/></div>
  
  The order of selecting 17 face landmarks is (48, 59-54, 26-17), reference code [crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py) In the experiment, it took about 10 minutes to generate 712 non-mask areas using dlib.
  
