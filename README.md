@@ -43,12 +43,14 @@ The existing neural network model largely rely on critical regions(eyes, noses) 
 <div align=center><img src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map.png"/></div>
  
  
- Therefore, we restrict the adversarial noises on significant facial areas. In the implementation, we use dlib to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image as attentional masks [mask1](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/tree/master/mask1). For a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
+ Therefore, we restrict the adversarial noises on significant facial areas. In the implementation, we use dlib<sup>[4]/sup> to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image as attentional masks [mask1](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/tree/master/mask1). For a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
  
  
  <div align=center><img width="250" height="300" src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks.png"/></div>
  
- The order of selecting 17 face landmarks is (48, 59-54, 26-17), reference code [crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py) In the experiment, it took about 10 minutes to generate 712 non-mask areas using dlib.
+ The order of selecting 17 face landmarks is (48, 59-54, 26-17), reference code [crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py) In the experiment, it took about 10 minutes to generate 712 non-mask areas using dlib. 
+ 
+ Of course, we can also convert the attention map into a mask of [0,1] to complete the matrix multiplication of noise.
  
 
 ### momentum trick<sup>[1]</sup>
@@ -71,3 +73,4 @@ $$X_{n+1}^{adv}=Clip_X^ϵ ( X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ
 1. [Boosting Adversarial Attacks with Momentum](https://arxiv.org/pdf/1710.06081.pdf)
 2. [Paying More Attention to Attention: Improving the Performance of Convolutional Neural Networks via Attention Transfer](https://arxiv.org/abs/1612.03928) | [code](https://github.com/szagoruyko/attention-transfer)
 3. [Improving Transferability of Adversarial Examples with Input Diversity](https://arxiv.org/abs/1803.06978)
+4. [Python removes the face background area with dlib landmarks](https://blog.csdn.net/kgzhang/article/details/75570843)
