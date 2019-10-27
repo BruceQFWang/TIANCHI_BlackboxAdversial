@@ -64,7 +64,7 @@ Integrating the momentum into the iterative process of the attack stabilizes the
 When training the lfw dataset, in addition to directly cropping the face portion of 112*112, we also employ a random padding similar to data augmentation, random resizing operation, to promote the diversity of the input mode.
 The algorithm computation process is as follows:
 
-$$X_{n+1}^{adv}=Clip_X^ϵ ( X_n^{adv}+α*sign(∇_x L(T(X_n^{adv};p),y^{true};θ)) )$$
+<div align=center><img src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/input%20diversity.png"/></div>
 
 
 ## Reference
