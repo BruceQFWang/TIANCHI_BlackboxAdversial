@@ -45,8 +45,7 @@ The existing neural network model largely rely on critical regions(eyes, noses) 
  Therefore, we restrict the adversarial noises on significant facial areas. In the implementation, we use dlib to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image as attentional masks [mask1](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/tree/master/mask1). For a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
  
  
- ![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks%20crop.png) 
- <div align=center><img width="150" height="150" src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks%20crop.png"/></div>
+ <div align=center><img width="250" height="250" src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks%20crop.png"/></div>
  
  The order of selecting 17 face landmarks is (48, 59-54, 26-17), reference code [crop_image.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/crop_image.py) In the experiment, it took about 10 minutes to generate 712 non-mask areas using dlib.
  
