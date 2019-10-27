@@ -43,7 +43,7 @@ The existing neural network model largely rely on critical regions(eyes, noses) 
 <div align=center><img src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/attention%20map.png"/></div>
  
  
- Therefore, we restrict the adversarial noises on significant facial areas. In the implementation, we use dlib<sup>[4]<sup> to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image as attentional masks [mask1](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/tree/master/mask1). For a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
+ Therefore, we restrict the adversarial noises on significant facial areas. In the implementation, we use dlib<sup>[4]</sup> to calibrate the 68 landmarks of the face, select 17 points to form a non-mask area, and finally we will save the generated image as attentional masks [mask1](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/tree/master/mask1). For a few pictures that cannot be used to calibrate the mapmark with dlib , we manually frame the face range.
  
  
  <div align=center><img width="250" height="300" src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/dlib%2068%20face%20landmarks.png"/></div>
