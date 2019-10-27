@@ -21,7 +21,6 @@ If you only add noise to the face area, you need to leverage dlib to crop the fa
 ### Ensemble models
 To address the black-box face attack challenge, we integrate the common DNN model structure<sup>[1]</sup>, including IR50, IR101, IR152 (model depth is different). The code for model construction is in [model_irse.py](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/model_irse.py). The specific algorithm flow chart is shown in Figure 1. Considering that the online evaluation system may determine the category of the image by similarity, we employ the target attack. [Cal_likehood.py]() calculates the similarity between the faces through multi-model ensembling. We select the second similar image as the attack target. At the same time, our loss function is made up of three components, the classic distance loss such as L2, cos loss. TV loss is to maintain the smoothness of the image, which will be elaborated later. The resulting noise will be convolved by gauss kernel and finally superimposed on the original image. The above process is iterated until the current picture is terminated with its own matrix similarity of more than 0.25.
 
-![image](https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/Algorithm%20flowchart%20n.png)
 <div align=center><img src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/Algorithm%20flowchart%20n.png"/></div>
 
 
