@@ -57,12 +57,8 @@ The existing neural network model largely rely on critical regions(eyes, noses) 
 
 ### momentum trick<sup>[1]</sup>
 Integrating the momentum into the iterative process of the attack stabilizes the update direction and leaves the poor local maximum during the iteration, resulting in adversarial samples with strong generalization ability. In order to elevated the success rate of black box attacks, we integrate the momentum iteration algorithm into our pipeline. Experiments show that the black box attack is better after adding the momentum term. The formula for the calculation is as follows:
-$$
-g_{n+1}= μ*g_n+(∇_x L(X_n^{adv},y^{true};θ))/{||∇_x L(X_n^{adv},y^{true};θ)||_1 }
-$$
 
-
-$$X_{n+1}^{adv}=Clip_X^ϵ (X_n^{adv}+α*sign(g_{n+1}) )  $$
+<div align=center><img src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/momentum.png"/></div>
 
 ### input diversity<sup>[3]</sup>
 When training the lfw dataset, in addition to directly cropping the face portion of 112*112, we also employ a random padding similar to data augmentation, random resizing operation, to promote the diversity of the input mode.
