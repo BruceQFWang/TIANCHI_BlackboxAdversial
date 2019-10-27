@@ -26,6 +26,8 @@ To address the black-box face attack challenge, we integrate the common DNN mode
 
 In addition, our model still adopts multi-process multi-graphics acceleration. We utilize two GTX 1080Ti, and it takes less than one hour to generate 712 samples.
 
+ <div align=center><img src="https://github.com/BruceQFWang/TIANCHI_BlackboxAdversial/blob/master/assets/TVloss.png"/></div>
+
 ### TV loss
 In the process of noise cancelling, the artificial noises may have a very enormous visual impact on the result images. At this time, we need to add some regularizaiton to the optimization problem to restrain the image smooth. TV loss is A commonly used regularizaiton in the computer vision. The integration of the continuous domain becomes the summation in the discrete region of the pixel. The specific calculation process is as follows:
 $$ tvloss= ∑_{i,j}((x_{i,j-1}-x_{i,j} )^2+(x_{i+1,j}-x_{i,j} )^2 )^{β/2} $$
