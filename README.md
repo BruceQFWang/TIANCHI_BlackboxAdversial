@@ -1,4 +1,4 @@
-[![MIT](https://img.shields.io/badge/license-MIT-green)]
+![MIT](https://img.shields.io/badge/license-MIT-green)
 
 # [TIANCHI_BlackboxAdversial](https://tianchi.aliyun.com/forum/postDetail?spm=5176.12282027.0.0.6003379cgB3pPW&postId=79471)
 
