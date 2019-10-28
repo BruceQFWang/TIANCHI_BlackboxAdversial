@@ -5,6 +5,7 @@
 
 # [TIANCHI_BlackboxAdversial](https://tianchi.aliyun.com/forum/postDetail?spm=5176.12282027.0.0.6003379cgB3pPW&postId=79471)
 
+[知乎链接](https://zhuanlan.zhihu.com/p/88845833)
 
 ## Environment & Run
 - python3
